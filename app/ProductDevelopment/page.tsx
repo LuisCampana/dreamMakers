@@ -260,7 +260,7 @@ const ProductDevelopmentPage = () => {
                   className={`flex flex-col ${
                     index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"
                   } items-center gap-8 lg:gap-12 ${
-                    index % 2 === 0 ? "bg-[#FAF6FF] rounded-2xl p-8" : ""
+                    index % 2 === 0 ? "bg-[#FAF6FF] rounded-2xl p-4 lg:p-8" : ""
                   }`}
                 >
                   <div className="w-full lg:w-1/2">
@@ -363,8 +363,8 @@ const ProductDevelopmentPage = () => {
         </section>
       </Body>
 
-      <div className="rounded-[40px] bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] max-w-7xl mx-auto text-center relative z-10 py-16 px-4 mb-22">
-        <div className="absolute lg:left-[0%] left-[15%] lg:top-[15%] top-[15%]">
+      <div className="w-[90%] rounded-[40px] bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] max-w-7xl mx-auto text-center relative z-10 py-16 px-4 mb-22">
+        <div className="absolute lg:left-[0%] left-[1%] lg:top-[15%] top-[1%]">
           <Image
             src="/images/productDevelopment/half-moon.png"
             alt="Network decoration"
@@ -373,7 +373,7 @@ const ProductDevelopmentPage = () => {
             className="lg:w-[156px] lg:h-[156px] w-[70px] h-[70px] opacity-80"
           />
         </div>
-        <div className="absolute lg:right-[0%] right-4 lg:top-[60%] top-[65%] rotate-[200deg]">
+        <div className="absolute lg:right-[0%] right-[1%] lg:top-[60%] top-[85%] rotate-[200deg]">
           <Image
             src="/images/productDevelopment/half-moon.png"
             alt="Network decoration"
@@ -383,12 +383,12 @@ const ProductDevelopmentPage = () => {
           />
         </div>
         <h2
-          className={`text-4xl md:text-[56px] font-bold text-white mb-6 ${syne.className}`}
+          className={`text-[30px] md:text-[56px] font-bold text-white mb-6 ${syne.className}`}
         >
           We drive business growth with memorable digital products.
         </h2>
         <p
-          className={`text-xl md:text-2xl text-white/90 mb-8 ${poppins.className}`}
+          className={`text-[24px]  text-white/90 mb-8 font-semibold ${poppins.className}`}
         >
           Let&apos;s bring your vision to life.
         </p>
@@ -511,23 +511,23 @@ const ProductDevelopmentPage = () => {
         </section>
       </div>
 
-      <section className="bg-white py-16 px-4">
+      <section className="bg-white py-16 md:px-4 px-0">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 order-2 lg:order-1 px-4">
               <h2
                 className={`text-4xl md:text-[54px] font-bold text-black mb-8  ${syne.className}`}
               >
                 Success stories
               </h2>
               <p
-                className={`text-gray-600 text-[22px] leading-relaxed mb-6 w-[85%] ${poppins.className}`}
+                className={`text-black text-[18px] leading-relaxed mb-6 md:w-[85%] w-[100%] font-normal ${poppins.className}`}
               >
                 Discover how our product development Work based entirely on user
                 feedback—took one startup to the next level.
               </p>
               <p
-                className={`text-gray-600 text-[22px] leading-relaxed mb-8 w-[85%] ${poppins.className}`}
+                className={`text-black text-[18px] leading-relaxed mb-8 md:w-[85%] w-[100%] font-normal ${poppins.className}`}
               >
                 Our Versatile Technical Expertise Is The Gold Standard Of The
                 Industry.
@@ -536,7 +536,7 @@ const ProductDevelopmentPage = () => {
                 Read More
               </Button>
             </div>
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 order-1 lg:order-2">
               <div className="relative">
                 <div className="rounded-2xl p-4">
                   <div className="relative">
@@ -545,7 +545,7 @@ const ProductDevelopmentPage = () => {
                       alt="Team collaboration"
                       width={620}
                       height={427}
-                      className="w-[620px] h-[427px] object-cover rounded-2xl"
+                      className="w-full h-[300px] lg:h-[427px] object-cover rounded-2xl"
                     />
                   </div>
                 </div>
@@ -555,14 +555,14 @@ const ProductDevelopmentPage = () => {
         </div>
       </section>
 
-      <div className="rounded-[40px] bg-[#000000] max-w-7xl mx-auto text-center relative z-10 py-16 px-4 mb-22">
+      <div className="rounded-[40px] bg-[#000000] md:max-w-7xl w-[90%] mx-auto text-center relative z-10 py-16 px-4 mb-22">
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <h2
-            className={`text-3xl md:text-[56px] font-bold text-white mb-8 leading-tight  ${syne.className}`}
+            className={`text-[24px] md:text-[56px] font-bold text-white mb-8 leading-tight  ${syne.className}`}
           >
             We&apos;ll help you plan, design, and grow your digital product
           </h2>
-          <Button className="cursor-pointer font-normal bg-white text-black hover:bg-gray-100 border border-black px-8 py-6 rounded-full  shadow-lg transition-all duration-300 text-lg">
+          <Button className={`cursor-pointer font-normal bg-white text-black hover:bg-gray-100 border border-black px-8 py-6 rounded-full  shadow-lg transition-all duration-300 text-lg ${poppins.className} text-[18px]`}>
             Get In Touch
           </Button>
         </div>
@@ -598,16 +598,16 @@ const ProductDevelopmentPage = () => {
                       : "bg-white border border-gray-200"
                   }`}
                 >
-                  <div className="p-6 flex items-center justify-between">
+                  <div className="p-4 md:p-6 flex items-center justify-between">
                     <h3
-                      className={`text-[32px] font-semibold  ${
+                      className={`text-[18px] md:text-[32px] font-semibold  ${
                         isExpanded ? "text-white" : "text-gray-800"
                       } ${syne.className}`}
                     >
                       {item.title}
                     </h3>
                     <button
-                      className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                      className={`md:w-8 md:h-8 w-4 h-4 rounded-full flex items-center justify-center ${
                         isExpanded
                           ? "bg-white"
                           : "bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE]"

@@ -42,13 +42,13 @@ const DesktopHeader = () => {
               Our Work
             </Link>
             <Link
-              href="/ProductDevelopment"
+              href="/product-development"
               className={`text-white font-medium hover:text-gray-300 transition ${poppins.className}`}
             >
               Product Development
             </Link>
             <Link
-              href="/SoftwareDevelopment"
+              href="/software-development"
               className={`text-white font-medium hover:text-gray-300 transition ${poppins.className}`}
             >
               Custom Software Development{" "}

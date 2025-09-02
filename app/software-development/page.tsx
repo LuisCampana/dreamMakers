@@ -310,7 +310,7 @@ const CustomSoftwareDevelopmentPage = () => {
               <div className="w-full lg:w-1/2 order-1 lg:order-2">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/softwareDevelopment/group1.png"
+                    src="/images/softwareDevelopment/leading-edge.png"
                     alt="Leading Edge Services"
                     width={620}
                     height={637}

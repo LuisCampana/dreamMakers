@@ -72,9 +72,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
               top: getPositionValue(project.numberPosition?.top),
               bottom: getPositionValue(project.numberPosition?.bottom) || "5%",
             }}
-          >
+          >{/*bg-gradient-to-r  from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] 
+           */} 
             <span
-              className={`text-[34px] lg:text-6xl font-bold bg-gradient-to-r  from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] bg-clip-text text-transparent drop-shadow-xl ${poppins.className} leading-none`}
+              className={`text-[34px] lg:text-6xl font-bold bg-gradient-to-r from-[#8DE7AF] from-0% via-[#8DE7AF] via-[10%] via-[#4D80F9] via-[50%] to-[#8B39EE] to-100% bg-clip-text text-transparent drop-shadow-xl ${poppins.className} leading-none`}
             >
               {project.id}
             </span>

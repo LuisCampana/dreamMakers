@@ -83,9 +83,10 @@ const WorkPage = () => {
       <Body>
         <HeroSection
           title="Our Work"
-          description="At DreamMakers.Tech, We Take Pride In Delivering High-Quality Digital Solutions That Drive Business Success. From Startups To Enterprises, Our Team Has Built Cutting-Edge Products That Solve Real-World Challenges."
+          description="At Dream Makers we take pride in delivering high-quality digital solutions that drive business success. From startups to enterprises, our team has built cutting-edge products that solve real-world challenges."
           buttonText="Contact Us"
           buttonVariant="transparent"
+          
         />
 
         <section className="bg-white py-12 lg:py-16 px-4">

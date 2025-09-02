@@ -76,7 +76,7 @@ const MobileFooter = () => {
           <ul className="space-y-2">
             <li>
               <Link
-                href="/SoftwareDevelopment"
+                href="/software-development"
                 className="text-white hover:text-cyan-400 transition-colors"
               >
                 Custom Software
@@ -84,7 +84,7 @@ const MobileFooter = () => {
             </li>
             <li>
               <Link
-                href="/ProductDevelopment"
+                href="/product-development"
                 className="text-white hover:text-cyan-400 transition-colors"
               >
                 Product Development

@@ -168,22 +168,22 @@ const ProductDevelopmentPage = () => {
             </h2>
 
             <div className="flex justify-center mb-12">
-              <div className="flex md:gap-8 gap-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] rounded-full"></div>
-                  <span className={`text-black font-medium text-[18px] ${syne.className}`}>
+              <div className="flex md:gap-8 gap-0">
+                <div className="flex items-center gap-2 relative">
+                  <div className="md:w-3 md:h-3 w-[12px] h-[12px] bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] rounded-full absolute md:static left-[-25px] md:left-0"></div>
+                  <span className={`text-black font-medium md:text-[18px] text-[14px] left-[-7px] md:left-0 ${syne.className} relative md:static`}>
                     Creative design
                   </span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] rounded-full"></div>
-                  <span className={`text-black font-medium text-[18px] ${syne.className}`}>
+                <div className="flex items-center gap-2 relative">
+                  <div className="md:w-3 md:h-3 w-[12px] h-[12px] bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] rounded-full absolute md:static left-[-2px] md:left-0"></div>
+                  <span className={`text-black font-medium md:text-[18px] text-[14px] ${syne.className} left-[15px] md:left-0 relative md:static`}>
                     Top-tier engineering
                   </span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] rounded-full"></div>
-                  <span className={`text-black font-medium text-[18px] ${syne.className}`}>
+                <div className="flex items-center gap-2 relative">
+                  <div className="w-[12px] h-[12px] md:w-3 md:h-3 bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] rounded-full absolute md:static left-[20px] md:left-0"></div>
+                  <span className={`text-black font-medium md:text-[18px] text-[14px] ${syne.className} left-[35px] md:left-0 relative md:static`}>
                     Innovation
                   </span>
                 </div>
@@ -415,7 +415,7 @@ const ProductDevelopmentPage = () => {
             <h1
               className={`text-3xl md:text-[56px] font-bold text-white mb-4 md:mb-6 ${syne.className}`}
             >
-              Why Choose DreamMakers.Tech?
+              Why Choose DreamMakers?
             </h1>
 
             <p
@@ -600,7 +600,7 @@ const ProductDevelopmentPage = () => {
                 >
                   <div className="p-4 md:p-6 flex items-center justify-between">
                     <h3
-                      className={`text-[18px] md:text-[32px] font-semibold  ${
+                      className={`text-[13px] md:text-[32px] font-semibold  ${
                         isExpanded ? "text-white" : "text-gray-800"
                       } ${syne.className}`}
                     >
@@ -614,7 +614,7 @@ const ProductDevelopmentPage = () => {
                       }`}
                     >
                       <svg
-                        className={`w-4 h-4 ${
+                        className={`md:w-4 md:h-4 w-[20px] h-[20px] ${
                           isExpanded ? "text-gray-600" : "text-white"
                         }`}
                         fill="none"
@@ -630,17 +630,21 @@ const ProductDevelopmentPage = () => {
                       </svg>
                     </button>
                   </div>
-                  {isExpanded && (
-                    <div className="p-4">
+                  <div
+                    className={`overflow-hidden transition-all duration-750 ease-in-out ${
+                      isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <div className="md:p-4 p-2">
                       <div className="bg-white rounded-[30px] p-6 border border-gray-200">
                         <p
-                          className={`text-gray-700 leading-relaxed font-400 text-[16px] ${poppins.className}`}
+                          className={`text-gray-700 leading-relaxed font-400 text-[12px] md:text-[16px] ${poppins.className}`}
                         >
                           {item.content}
                         </p>
                       </div>
                     </div>
-                  )}
+                  </div>
                 </div>
               );
             })}

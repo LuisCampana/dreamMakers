@@ -8,7 +8,7 @@ const Herosection = () => {
   return (
     <>
       <section className="flex flex-row-reverse md:flex-row items-center justify-between relative bg-black lg:p-[8%] px-4 md:px-0 py-8 md:py-0 md:max-h-[768px]">
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center mb-4 md:mb-0 order-1 md:order-2">
+        <div className="hidden md:block w-full md:w-1/2 flex justify-center md:justify-end items-center mb-4 md:mb-0 order-1 md:order-2">
           <Image
             src="/images/fondo1.png"
             alt="Tunel"
@@ -61,7 +61,7 @@ const Herosection = () => {
                 className="w-[20px] h-[20px] md:w-[52px] md:h-[52px] rounded-full border-2 border-white bg-[#6c6c68]"
               />
             </div>
-            <div className="flex items-center gap-2 md:gap-4 ">
+            <div className="flex items-center gap-2 md:gap-4  ">
               <span
                 className={`text-[15px] md:text-[95px] text-white leading-tight md:leading-[70px] whitespace-nowrap ${syne.className}`}
               >
@@ -78,7 +78,7 @@ const Herosection = () => {
           </div>
         </div>
       </section>
-      <div className="w-full relative bg-black pb-15 px-4">
+      <div className="w-full relative bg-black pb-15 px-4 hidden md:block ">
         <div className="absolute top-[3%] right-[4%] md:top-[25%] md:right-[18%] z-10">
           <span
             className={`text-[#7DF9A7] text-[8px] md:text-[30px] font-bold tracking-wide uppercase text-center ${syne.className}`}

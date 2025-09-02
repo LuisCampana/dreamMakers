@@ -26,6 +26,7 @@ const Footer = () => {
 
       {/* Desktop Footer */}
       <div className="hidden md:block w-full p-8 md:p-12 lg:p-16 relative">
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 relative">
           {/* Columna 1: Logo y Social Media */}
           <div className="lg:col-span-4 flex flex-col gap-8">
@@ -61,19 +62,18 @@ const Footer = () => {
                 >
                   <FaFacebookF />
                 </a>
-                <Image src="/file.svg" alt="Wave Icon" width={32} height={32} />
               </div>
             </div>
           </div>
 
           {/* Botón "Go Up" con línea que atraviesa todo el alto */}
           <div className="hidden lg:block lg:col-span-1 relative">
-            <div className="absolute  w-px h-full bg-white"></div>
+            {/* <div className="absolute  w-px h-full bg-white"></div> */}
             <button 
               onClick={scrollToTop}
               className="h-full flex items-center justify-center relative z-10 hover:scale-105 transition-transform"
             >
-              <div className="flex flex-col items-center gap-2 text-sm font-bold p-3 bg-gradient-to-b from-cyan-400 to-purple-500 rounded-full shadow-lg">
+              <div className="flex flex-col items-center gap-2 text-sm font-bold p-3 bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] rounded-full shadow-lg">
                 <span>G</span>
                 <span>O</span>
                 <FiArrowUp className="w-5 h-5" />
@@ -88,12 +88,12 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Explore</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="hover:text-cyan-400 transition-colors">
+                <Link href="/" className="hover:text-gray-300 transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/Work" className="hover:text-cyan-400 transition-colors">
+                <Link href="/Work" className="hover:text-gray-300 transition-colors">
                   Our Work
                 </Link>
               </li>
@@ -105,12 +105,12 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/SoftwareDevelopment" className="hover:text-cyan-400 transition-colors">
+                <Link href="/software-development" className="hover:text-gray-300 transition-colors">
                   Custom Software
                 </Link>
               </li>
               <li>
-                <Link href="/ProductDevelopment" className="hover:text-cyan-400 transition-colors">
+                <Link href="/product-development" className="hover:text-gray-300 transition-colors">
                   Product Development
                 </Link>
               </li>
@@ -131,7 +131,7 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className="px-5 py-2 rounded-full font-semibold text-white bg-gradient-to-r from-cyan-400 to-purple-500 hover:scale-105 transition-transform"
+                className="px-5 py-2 rounded-full font-semibold text-white bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] hover:scale-105 transition-transform"
               >
                 Subscribe
               </button>
@@ -141,7 +141,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
         <hr className="my-8 border-white/20" />
 
         <div className="text-center text-white/50">

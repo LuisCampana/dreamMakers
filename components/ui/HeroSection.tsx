@@ -59,7 +59,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           {title}
         </h1>
         <p
-          className={`text-gray-300 text-[13px] lg:text-lg xl:text-[18px] max-w-4xl mx-auto mb-8 lg:mb-12 leading-relaxed px-4 lg:px-0 ${poppins.className}`}
+          className={`text-gray-300 text-[13px] lg:text-[22px]  max-w-4xl mx-auto mb-8 lg:mb-12 leading-relaxed px-4 lg:px-0 ${poppins.className}`}
         >
           {description}
         </p>

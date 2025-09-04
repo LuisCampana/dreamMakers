@@ -25,24 +25,21 @@ const WhyWorkWithUsSection: React.FC<WhyWorkWithUsSectionProps> = ({
 
   return (
     <div className={`relative ${className}`}>
-      <div className="flex justify-center -mb-4 md:-mb-6">
-        <div className="relative z-10">
-          <div className="bg-black px-10 md:px-16 py-3 md:py-5 rounded-t-[36px] shadow-[0_8px_18px_rgba(0,0,0,0.35)] relative">
+      <div className="flex justify-center flex-row items-end  w-full z-9999 absolute top-[-55px] md:top-[-105px]">
+         <div className=" flex justify-center items-center h-[30px] md:h-[90px]" >
+           <div className="w-[30px] h-[27px] md:w-[68px] md:h-[60px] bg-black" style={{WebkitMask: 'radial-gradient(circle at top left, transparent 75%, black 65%)', mask: 'radial-gradient(circle at top left, transparent 75%, black 65%)'}}></div>
+          </div>
+          <div className="bg-black px-10 md:px-16 pt-3 md:py-5 rounded-t-[36px] shadow-[0_8px_18px_rgba(0,0,0,0.35)] relative">
             <span
-              className={`font-semibold text-white text-xl md:text-[32px] ${syne.className}`}
+              className={`font-semibold text-white text-[32px] md:text-[56px] ${syne.className}`}
             >
               Our Work
             </span>
+            
           </div>
-          <div className="absolute left-[-20px] bottom-0 w-[20px] h-[20px]">
-            <div className="w-full h-full bg-black rounded-br-[20px]"></div>
-            {/* <div className="absolute top-0 right-0 w-[20px] h-[20px] bg-white rounded-br-[20px]"></div> */}
+          <div className=" flex justify-center items-center h-[30px] md:h-[90px]" >
+           <div className="w-[30px] h-[27px] bg-black md:w-[68px] md:h-[60px]" style={{WebkitMask: 'radial-gradient(circle at top right , transparent 75%, black 65%)', mask: 'radial-gradient(circle at top right, transparent 75%, black 65%)'}}></div>
           </div>
-          <div className="absolute right-[-20px] bottom-0 w-[20px] h-[20px]">
-            <div className="w-full h-full bg-black rounded-bl-[20px]"></div>
-            {/* <div className="absolute top-0 left-0 w-[20px] h-[20px] bg-white rounded-bl-[20px]"></div> */}
-          </div>
-        </div>
       </div>
 
       <section className="bg-black pt-10 md:pt-14 pb-12 md:pb-16 px-4 rounded-[40px] shadow-[0_20px_60px_rgba(0,0,0,0.5)] border border-gray-700">

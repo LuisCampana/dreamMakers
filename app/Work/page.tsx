@@ -99,7 +99,17 @@ const WorkPage = () => {
           </div>
         </section>
       </Body>
-      <WhyWorkWithUsSection />
+      <WhyWorkWithUsSection 
+        title="Our Work"
+        subtitle="Why Work with Us?"
+        description="We leverage modern technologies to ensure performance, security, and scalability."
+        highlights={[
+          "Agile & transparent development process",
+          "Proven track record of successful digital solutions",
+          "Scalable technology to support your growth",
+        ]}
+        buttonText="Let's Build Something Great"
+      />
       <div className="bg-white lg:px-4 py-6 lg:py-8 px-8">
         <div className="max-w-7xl mx-auto">
           <CTASection />

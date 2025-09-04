@@ -7,7 +7,7 @@ const syne = Syne({ subsets: ["latin"] });
 const Herosection = () => {
   return (
     <>
-      <section className="flex flex-row-reverse md:flex-row items-center justify-between relative bg-black lg:p-[8%] px-4 md:px-0 py-8 md:py-0 md:max-h-[768px]">
+      <section className="flex flex-row-reverse md:flex-row items-center justify-between relative bg-black lg:p-[8%] px-4 md:px-0 py-8 md:py-0 md:max-h-[768px] max-h-[278px]">
         <div className="hidden md:block w-full md:w-1/2 flex justify-center md:justify-end items-center mb-4 md:mb-0 order-1 md:order-2">
           <Image
             src="/images/fondo1.png"
@@ -18,20 +18,20 @@ const Herosection = () => {
           />
         </div>
 
-        <div className="w-full md:w-1/2 z-10 order-2 md:order-1 space-y-3 md:space-y-0">
-          <button
+        <div className="w-full md:w-1/2 z-10 order-2 md:order-1 space-y-3 md:space-y-0 justify-items-center md:justify-items-start">
+          {/*<button
             className={`px-4 md:px-8 py-2 border border-white rounded-full text-white font-semibold mb-2 md:mb-2 text-[10px] md:text-base ${syne.className}`}
           >
             Dream Makers
-          </button>
+          </button>*/}
           <h1
-            className={`text-[13px] md:text-[95px] text-white leading-tight md:leading-[100px] whitespace-nowrap ${syne.className}`}
+            className={`text-[30px] md:text-[95px] text-white leading-tight md:leading-[100px] whitespace-nowrap ${syne.className}`}
           >
             Transform your <br />
             company&apos;s future with
           </h1>
           <div className="flex flex-row md:flex-row items-start md:items-center gap-3 md:gap-8 mt-2 md:mt-4">
-            <div className="flex -space-x-2 md:-space-x-3 shrink-0">
+            <div className="hidden md:flex -space-x-2 md:-space-x-3 shrink-0">
               <Image
                 src="/images/avatars/cliente1.png"
                 alt="Avatar 1"
@@ -61,9 +61,9 @@ const Herosection = () => {
                 className="w-[20px] h-[20px] md:w-[52px] md:h-[52px] rounded-full border-2 border-white bg-[#6c6c68]"
               />
             </div>
-            <div className="flex items-center gap-2 md:gap-4  ">
+            <div className="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-4 mt-4 md:mt-0">
               <span
-                className={`text-[15px] md:text-[95px] text-white leading-tight md:leading-[70px] whitespace-nowrap ${syne.className}`}
+                className={`text-[30px] md:text-[95px] text-white leading-tight md:leading-[70px] whitespace-nowrap ${syne.className}`}
               >
                 Dream Makers.
               </span>
@@ -72,7 +72,7 @@ const Herosection = () => {
                 alt="Flecha"
                 width={200}
                 height={16}
-                className="w-16 h-4 md:w-[200px] md:h-8 inline-block"
+                className="w-16 h-4 md:w-[200px] md:h-8 inline-block rotate-90 md:rotate-0"
               />
             </div>
           </div>

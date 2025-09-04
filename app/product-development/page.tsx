@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/ui/HeroSection";
 import CTASection from "@/components/ui/CTASection";
 import StatCard from "@/components/ui/StatCard";
+import WhyWorkWithUsSection from "@/components/ui/WhyWorkWithUsSection";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -363,7 +364,7 @@ const ProductDevelopmentPage = () => {
         </section>
       </Body>
 
-      <div className="w-[90%] rounded-[40px] bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] max-w-7xl mx-auto text-center relative z-10 py-16 px-4 mb-22">
+      <div className="mb-[200px] w-[90%] rounded-[40px] bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] max-w-7xl mx-auto text-center relative z-10 py-16 px-4">
         <div className="absolute lg:left-[0%] left-[1%] lg:top-[15%] top-[1%]">
           <Image
             src="/images/productDevelopment/half-moon.png"
@@ -399,117 +400,32 @@ const ProductDevelopmentPage = () => {
         </Button>
       </div>
 
-      <div className="relative -mt-8">
-        <div className="flex justify-center mb-0">
-          <div className="relative bg-black px-8 md:px-35 py-3 md:py-6 rounded-t-[20px] md:rounded-t-[25px] z-10">
-            <span
-              className={`font-semibold text-white text-xl md:text-[56px] ${syne.className}`}
-            >
-              Product Development
-            </span>
-          </div>
-        </div>
-
-        <section className="bg-black py-12 md:py-16 px-4 rounded-b-[30px] md:rounded-b-[50px] rounded-t-[20px] md:rounded-t-[25px]">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1
-              className={`text-3xl md:text-[56px] font-bold text-white mb-4 md:mb-6 ${syne.className}`}
-            >
-              Why Choose DreamMakers?
-            </h1>
-
-            <p
-              className={`text-gray-300 text-base md:text-xl max-w-4xl mx-auto mb-8 md:mb-12 leading-relaxed px-4 md:px-0 ${poppins.className}`}
-            >
-              We leverage modern technologies to ensure performance, security,
-              and scalability.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12 px-4 md:px-0">
-              <div className="text-center">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
-                  <div className="w-6 h-6 md:w-8 md:h-8 bg-white rounded-sm relative">
-                    <div className="absolute top-1 left-1 w-1 h-1 md:w-2 md:h-2 bg-cyan-400 rounded-sm"></div>
-                    <div className="absolute bottom-1 right-1 w-2 h-2 md:w-3 md:h-3 bg-blue-500 rounded-full"></div>
-                  </div>
-                </div>
-                <h4
-                  className={`text-lg md:text-[24px] font-bold text-white mb-2 md:mb-3 ${poppins.className}`}
-                >
-                  Custom-Tailored Approach
-                </h4>
-                <p
-                  className={`text-gray-300 text-sm md:text-base ${poppins.className}`}
-                >
-                  Solutions that align with your business needs.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
-                  <div className="w-6 h-6 md:w-8 md:h-8 bg-white rounded-sm relative">
-                    <div className="absolute top-0 right-0 w-1 h-1 md:w-2 md:h-2 bg-cyan-400 rounded-sm"></div>
-                  </div>
-                </div>
-                <h4
-                  className={`text-lg md:text-[24px] font-bold text-white mb-2 md:mb-3 ${poppins.className}`}
-                >
-                  Cutting-Edge Technologies
-                </h4>
-                <p
-                  className={`text-gray-300 text-sm md:text-base ${poppins.className}`}
-                >
-                  AI, blockchain, cloud solutions & more.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
-                  <div className="flex items-center justify-center space-x-1">
-                    <div className="w-1 h-3 md:w-2 md:h-4 bg-white rounded-sm"></div>
-                    <div className="w-1 h-3 md:w-2 md:h-4 bg-white rounded-sm"></div>
-                    <div className="w-1 h-3 md:w-2 md:h-4 bg-white rounded-sm"></div>
-                  </div>
-                </div>
-                <h4
-                  className={`text-lg md:text-[24px] font-bold text-white mb-2 md:mb-3 ${poppins.className}`}
-                >
-                  Full-Cycle Development
-                </h4>
-                <p
-                  className={`text-gray-300 text-sm md:text-base ${poppins.className}`}
-                >
-                  From ideation to post-launch support.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
-                  <div className="w-4 h-6 md:w-6 md:h-8 bg-white rounded-sm relative">
-                    <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-3 h-1 md:w-4 md:h-2 bg-white rounded-sm"></div>
-                  </div>
-                </div>
-                <h4
-                  className={`text-lg md:text-[24px] font-bold text-white mb-2 md:mb-3 ${poppins.className}`}
-                >
-                  Future-proof architecture.
-                </h4>
-                <p
-                  className={`text-gray-300 text-sm md:text-base ${poppins.className}`}
-                >
-                  Future-proof architecture.
-                </p>
-              </div>
-            </div>
-
-            <Button
-              className={`cursor-pointer bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] hover:from-green-500 hover:to-purple-600 text-white px-6 md:px-8 py-3 rounded-full font-semibold shadow-lg transition-all duration-300 text-base md:text-[18px] ${poppins.className}`}
-            >
-              Read More
-            </Button>
-          </div>
-        </section>
-      </div>
+      <WhyWorkWithUsSection 
+        title="Why Choose"
+        subtitle="DreamMakers?"
+        highlights={[
+          {
+            title: "Custom-Tailored Approach",
+            description: "Solutions that align with your business needs."
+          },
+          {
+            title: "Cutting-Edge Technologies",
+            description: "AI, blockchain, cloud solutions & more."
+          },
+          {
+            title: "Full-Cycle Development",
+            description: "From ideation to post-launch support."
+          },
+          {
+            title: "Future-proof architecture",
+            description: "Future-proof architecture."
+          }
+        ]}
+        buttonText="Read More"
+        className="-mt-8"
+        variant="four-columns"
+        useCustomIcons={true}
+      />
 
       <section className="bg-white py-16 md:px-4 px-0">
         <div className="max-w-7xl mx-auto">

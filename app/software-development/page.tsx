@@ -12,7 +12,7 @@ import ServiceCard from "@/components/ui/ServiceCard";
 import StatCard from "@/components/ui/StatCard";
 import InsightCard from "@/components/ui/InsightCard";
 import HeroSection from "@/components/ui/HeroSection";
-import HowWeHelp from "@/components/ui/howWeHelp";
+import WhyWorkWithUsSection from "@/components/ui/WhyWorkWithUsSection";
 import { motion } from "framer-motion";
 
 const poppins = Poppins({
@@ -215,7 +215,7 @@ const CustomSoftwareDevelopmentPage = () => {
           </div>
         </section>
         
-        <section className="bg-white py-16 px-4">
+        <section className="bg-white py-16 px-4 pb-[200px]">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ x: -100, opacity: 0 }}
@@ -272,9 +272,28 @@ const CustomSoftwareDevelopmentPage = () => {
           </div>
         </section>
 
-        {/* How We Help You Thrive Section */}
 
-        <HowWeHelp />
+        <WhyWorkWithUsSection 
+          variant="services"
+          subtitle="you thrive"
+          title="How we help"
+          services={[
+            {
+              title: "Managed Services",
+              description: [
+                "Our end-to-end managed services ensure your software runs smoothly while you focus on growing your business. We handle development, maintenance, and continuous improvements, allowing you to stay ahead of the curve.",
+                "With proactive support from our specialized Studios, we ensure your software evolves alongside your business needs, providing long-term stability and innovation.",
+              ],
+            },
+            {
+              title: "Staff Augmentation",
+              description: [
+                "Whether you need a single expert or a full team, we provide pre-vetted specialists who integrate effortlessly into your workflow, enhancing productivity and delivering results from day one.",
+                "Seamlessly scale your in-house team with our flexible, cost-effective talent solutions.",
+              ],
+            },
+          ]}
+        />
 
         <section className="bg-white py-16 px-4">
           <div className="max-w-7xl mx-auto">

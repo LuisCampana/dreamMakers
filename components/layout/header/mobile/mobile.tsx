@@ -72,14 +72,12 @@ const MobileHeader = () => {
         </div>
       </div>
 
-      {/* Semi-transparent Overlay */}
+      {/* Overlay - Solo hasta el botón Let's Talk */}
       <div
-        className={`fixed inset-0 bg-none transition-opacity duration-500 ease-in-out z-40 ${
+        className={`fixed top-0 left-0 right-0 h-[400px] bg-black transition-opacity duration-500 ease-in-out z-40 ${
           open 
-            ? isScrolled 
-              ? "bg-opacity-20 opacity-100" 
-              : "bg-opacity-50 opacity-100"
-            : "bg-opacity-0 opacity-0 pointer-events-none"
+            ? "opacity-100" 
+            : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setOpen(false)}
       />

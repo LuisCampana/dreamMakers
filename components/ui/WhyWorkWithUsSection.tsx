@@ -106,11 +106,11 @@ const WhyWorkWithUsSection: React.FC<WhyWorkWithUsSectionProps> = ({
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-8 md:mb-12">
               {services.map((service, index) => (
                 <div key={index} className="text-center lg:text-left lg:px-0 px-8">
-                  <div className="flex justify-center lg:justify-start mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] rounded-full flex items-center justify-center">
-                      <span className="text-black text-2xl font-bold">✓</span>
-                    </div>
-                  </div>
+                  <GradientCheckBadge
+                      size="md"
+                      iconClassName="text-black/80"
+                      className="mx-auto mb-4"
+                    />
                   <h3
                     className={`lg:text-[34px] text-[26px] font-bold text-white mb-6 ${poppins.className}`}
                   >
@@ -190,7 +190,7 @@ const WhyWorkWithUsSection: React.FC<WhyWorkWithUsSectionProps> = ({
 
           {buttonText && (
             <Button
-              className={`bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] hover:brightness-110 text-white px-8 md:px-10 py-3 rounded-full font-semibold shadow-[0_8px_0_rgba(0,0,0,0.4)] transition-all duration-300 text-base md:text-[18px] ${poppins.className}`}
+              className={`font-normal cursor-pointer bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] hover:brightness-110 text-white px-8 md:px-10 py-3 rounded-full shadow-[0_8px_0_rgba(0,0,0,0.4)] transition-all duration-300 text-base md:text-[18px] f ${poppins.className}`}
             >
               {buttonText}
             </Button>

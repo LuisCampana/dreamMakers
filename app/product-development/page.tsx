@@ -33,10 +33,28 @@ interface ProcessStep {
     left?: number;
     top?: number;
   };
+  numberPositionMobile: {
+    right?: number;
+    bottom?: number;
+    left?: number;
+    top?: number;
+  };
 }
 
 const ProductDevelopmentPage = () => {
   const [expandedItems, setExpandedItems] = useState([0]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 468);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   const stats = [
     { number: "100+", label: "Product specialists" },
     { number: "150+", label: "Products delivered" },
@@ -98,6 +116,7 @@ const ProductDevelopmentPage = () => {
       image: "/images/productDevelopment/group2.png",
       imageAlt: "Discovery & Planning",
       numberPosition: { right: 0.1, bottom: 2 },
+      numberPositionMobile: { right: 0.1, bottom: 0.1 },
     },
     {
       number: "02",
@@ -113,6 +132,7 @@ const ProductDevelopmentPage = () => {
       image: "/images/productDevelopment/group3.png",
       imageAlt: "UI/UX Design",
       numberPosition: { left: 2, bottom: 3 },
+      numberPositionMobile: { left: 2, bottom: 0.1 },
     },
     {
       number: "03",
@@ -129,6 +149,7 @@ const ProductDevelopmentPage = () => {
       image: "/images/productDevelopment/group4.png",
       imageAlt: "Agile Development & Testing",
       numberPosition: { right: 2, bottom: 2 },
+      numberPositionMobile: { right: 2, bottom: 0.1 },
     },
     {
       number: "04",
@@ -145,6 +166,7 @@ const ProductDevelopmentPage = () => {
       image: "/images/productDevelopment/group5.png",
       imageAlt: "Launch & Growth",
       numberPosition: { left: 2, bottom: 3 },
+      numberPositionMobile: { left: 2, bottom: 0.1 },
     },
   ];
 
@@ -261,7 +283,7 @@ const ProductDevelopmentPage = () => {
                   className={`flex flex-col ${
                     index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"
                   } items-center gap-8 lg:gap-12 ${
-                    index % 2 === 0 ? "bg-[#FAF6FF] rounded-2xl p-4 lg:p-8" : ""
+                    index % 2 === 0 ? "bg-[#FAF6FF] rounded-2xl" : "" /*   index % 2 === 0 ? "bg-[#FAF6FF] rounded-2xl p-4 lg:p-8" : "" esto teniamos en el if*/
                   }`}
                 >
                   <div className="w-full lg:w-1/2">
@@ -277,18 +299,18 @@ const ProductDevelopmentPage = () => {
                       <div
                         className="absolute flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16"
                         style={{
-                          right: step.numberPosition?.right
-                            ? `${step.numberPosition.right}%`
-                            : undefined,
-                          left: step.numberPosition?.left
-                            ? `${step.numberPosition.left}%`
-                            : undefined,
-                          top: step.numberPosition?.top
-                            ? `${step.numberPosition.top}%`
-                            : undefined,
-                          bottom: step.numberPosition?.bottom
-                            ? `${step.numberPosition.bottom}%`
-                            : "5%",
+                          right: isMobile 
+                            ? (step.numberPositionMobile?.right ? `${step.numberPositionMobile.right}%` : undefined)
+                            : (step.numberPosition?.right ? `${step.numberPosition.right}%` : undefined),
+                          left: isMobile
+                            ? (step.numberPositionMobile?.left ? `${step.numberPositionMobile.left}%` : undefined)
+                            : (step.numberPosition?.left ? `${step.numberPosition.left}%` : undefined),
+                          top: isMobile
+                            ? (step.numberPositionMobile?.top ? `${step.numberPositionMobile.top}%` : undefined)
+                            : (step.numberPosition?.top ? `${step.numberPosition.top}%` : undefined),
+                          bottom: isMobile
+                            ? (step.numberPositionMobile?.bottom ? `${step.numberPositionMobile.bottom}%` : "5%")
+                            : (step.numberPosition?.bottom ? `${step.numberPosition.bottom}%` : "5%"),
                         }}
                       >
                         <span

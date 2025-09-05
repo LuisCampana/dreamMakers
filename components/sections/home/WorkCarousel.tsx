@@ -1,7 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { Syne } from "next/font/google";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, EffectCoverflow, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow';
 
 const syne = Syne({ subsets: ["latin"] });
 
@@ -15,8 +21,6 @@ interface Project {
 }
 
 const WorkCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   const projects: Project[] = [
     {
       id: 1,
@@ -47,27 +51,6 @@ const WorkCarousel = () => {
     },
   ];
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
-    );
-  };
-
-  const getVisibleProjects = () => {
-    const visible = [];
-    for (let i = -1; i <= 1; i++) {
-      const index = (currentIndex + i + projects.length) % projects.length;
-      visible.push({ ...projects[index], position: i });
-    }
-    return visible;
-  };
-
   return (
     <section className="bg-black py-12 px-4">
       <div className="max-w-7xl mx-auto">
@@ -80,36 +63,37 @@ const WorkCarousel = () => {
         </div>
 
         <div className="relative">
-          <div className="flex items-center justify-center space-x-4 md:space-x-8">
-            <button
-              onClick={prevSlide}
-              className="z-10 w-12 h-12 bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] rounded-full flex items-center justify-center text-white shadow-lg transition-colors"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-
-            <div className="flex items-center space-x-4 md:space-x-8 overflow-hidden">
-              {getVisibleProjects().map((project, index) => (
-                <div
-                  key={`${project.id}-${index}`}
-                  className={`flex-shrink-0 transition-all duration-300 ${
-                    project.position === 0
-                      ? "w-80 md:w-96 opacity-100 scale-100"
-                      : "w-60 md:w-72 opacity-60 scale-90"
-                  }`}
-                >
+          <Swiper
+            modules={[Navigation, Pagination, EffectCoverflow, Autoplay]}
+            effect="coverflow"
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView="auto"
+            coverflowEffect={{
+              rotate: 30,
+              stretch: 0,
+              depth: 200,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            navigation={{
+              nextEl: '.swiper-button-next-custom',
+              prevEl: '.swiper-button-prev-custom',
+            }}
+            pagination={{
+              el: '.swiper-pagination-custom',
+              clickable: true,
+            }}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            className="work-swiper"
+          >
+            {projects.map((project) => (
+              <SwiperSlide key={project.id} className="swiper-slide-custom">
+                <div className="w-72 md:w-80 mx-auto">
                   <div className="rounded-2xl overflow-hidden shadow-2xl relative">
                     <div className="relative h-64 md:h-80">
                       <Image
@@ -133,55 +117,54 @@ const WorkCarousel = () => {
                     </div>
                   </div>
 
-                  {project.position === 0 && (
-                    <div className="mt-6 text-center">
-                      <h4
-                        className={`text-2xl md:text-3xl font-bold text-white mb-4 ${syne.className}`}
-                      >
-                        {project.title}
-                      </h4>
-                      <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-                        {project.description}
-                      </p>
-                    </div>
-                  )}
+                  <div className="mt-6 text-center">
+                    <h4
+                      className={`text-2xl md:text-3xl font-bold text-white mb-4 ${syne.className}`}
+                    >
+                      {project.title}
+                    </h4>
+                    <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+                      {project.description}
+                    </p>
+                  </div>
                 </div>
-              ))}
-            </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-            <button
-              onClick={nextSlide}
-              className="z-10 w-12 h-12 bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] rounded-full flex items-center justify-center text-white shadow-lg transition-colors"
+          <button className="swiper-button-prev-custom absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] rounded-full flex items-center justify-center text-white shadow-lg transition-colors hover:scale-110">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-          </div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
 
-          <div className="flex justify-center mt-8">
-            <div className="flex space-x-2">
-              {projects.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentIndex ? "bg-white" : "bg-gray-600"
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
+          <button className="swiper-button-next-custom absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-gradient-to-r from-[#8DE7AF] via-[#4D80F9] to-[#8B39EE] rounded-full flex items-center justify-center text-white shadow-lg transition-colors hover:scale-110">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+
+          <div className="swiper-pagination-custom flex justify-center mt-8"></div>
         </div>
       </div>
     </section>

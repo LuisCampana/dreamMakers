@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { Syne } from "next/font/google";
+import { motion } from "framer-motion";
 
 const syne = Syne({ subsets: ["latin"] });
 
@@ -8,7 +10,7 @@ const Herosection = () => {
   return (
     <>
       <section className="flex flex-row-reverse md:flex-row items-center justify-between relative bg-black lg:p-[8%] px-4 md:px-0 py-8 md:py-0 md:max-h-[768px] max-h-[278px]">
-        <div className="hidden md:block w-full md:w-1/2 flex justify-center md:justify-end items-center mb-4 md:mb-0 order-1 md:order-2">
+        <div className="hidden md:flex w-full md:w-1/2 justify-center md:justify-end items-center mb-4 md:mb-0 order-1 md:order-2">
           <Image
             src="/images/fondo1.png"
             alt="Tunel"
@@ -24,14 +26,39 @@ const Herosection = () => {
           >
             Dream Makers
           </button>*/}
-          <h1
+          <motion.h1
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ 
+              duration: 0.8, 
+              ease: "easeOut",
+              delay: 0.2 
+            }}
             className={`text-[30px] md:text-[95px] text-white leading-tight md:leading-[100px] whitespace-nowrap ${syne.className}`}
           >
             Transform your <br />
             company&apos;s future with
-          </h1>
-          <div className="flex flex-row md:flex-row items-start md:items-center gap-3 md:gap-8 mt-2 md:mt-4">
-            <div className="hidden md:flex -space-x-2 md:-space-x-3 shrink-0">
+          </motion.h1>
+          <motion.div 
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ 
+              duration: 0.8, 
+              ease: "easeOut",
+              delay: 0.6 
+            }}
+            className="flex flex-row md:flex-row items-start md:items-center gap-3 md:gap-8 mt-2 md:mt-4"
+          >
+            <motion.div 
+              initial={{ x: -50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ 
+                duration: 0.6, 
+                ease: "easeOut",
+                delay: 1.0 
+              }}
+              className="hidden md:flex -space-x-2 md:-space-x-3 shrink-0"
+            >
               <Image
                 src="/images/avatars/cliente1.png"
                 alt="Avatar 1"
@@ -60,22 +87,39 @@ const Herosection = () => {
                 height={40}
                 className="w-[20px] h-[20px] md:w-[52px] md:h-[52px] rounded-full border-2 border-white bg-[#6c6c68]"
               />
-            </div>
+            </motion.div>
             <div className="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-4 mt-4 md:mt-0">
-              <span
+              <motion.span
+                initial={{ x: -80, opacity: 0, scale: 0.8 }}
+                animate={{ x: 0, opacity: 1, scale: 1 }}
+                transition={{ 
+                  duration: 0.8, 
+                  ease: "easeOut",
+                  delay: 0.8 
+                }}
                 className={`text-[30px] md:text-[95px] text-white leading-tight md:leading-[70px] whitespace-nowrap ${syne.className}`}
               >
                 Dream Makers.
-              </span>
-              <Image
-                src="/images/arrow1.png"
-                alt="Flecha"
-                width={200}
-                height={16}
-                className="w-16 h-4 md:w-[200px] md:h-8 inline-block rotate-90 md:rotate-0"
-              />
+              </motion.span>
+              <motion.div
+                initial={{ x: -60, opacity: 0, rotate: -45 }}
+                animate={{ x: 0, opacity: 1, rotate: 0 }}
+                transition={{ 
+                  duration: 0.6, 
+                  ease: "easeOut",
+                  delay: 1.2 
+                }}
+              >
+                <Image
+                  src="/images/arrow1.png"
+                  alt="Flecha"
+                  width={200}
+                  height={16}
+                  className="w-16 h-4 md:w-[200px] md:h-8 inline-block rotate-90 md:rotate-0"
+                />
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
       <div className="w-full relative bg-black pb-15 px-4 hidden md:block ">
